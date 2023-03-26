@@ -6,7 +6,6 @@
     <default-bar
       @toggle-drawer="drawer = !drawer"
     />
-    {{drawer}}
     <default-view />
   </v-app>
 </template>

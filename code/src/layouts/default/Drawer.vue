@@ -6,11 +6,12 @@
     <v-list nav>
     <!-- Close item -->
     <v-list-item
+      @click="drawer=false"
     >
       <v-btn
         icon="mdi-chevron-left"
         variant="text"
-        @click="drawer=false"
+        
       />
     </v-list-item>
 
