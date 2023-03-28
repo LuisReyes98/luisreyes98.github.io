@@ -1,1 +1,0 @@
-import{V as t}from"./VContainer.16fb4b46.js";import{Y as e,_ as o,$ as a,Z as n,aj as r}from"./index.3423d6bb.js";import"./tag.1626ec7e.js";const s=r("h1",null,"About",-1),m=e({__name:"About",setup(_){return(c,p)=>(n(),o(t,null,{default:a(()=>[s]),_:1}))}});export{m as default};
