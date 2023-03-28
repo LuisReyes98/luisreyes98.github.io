@@ -9,8 +9,7 @@ const routes = [
       // redirect from empty path to /about
       {
         path: '',
-        name: 'Home',
-        component: () => import(/* webpackChunkName: "about" */ '@/views/About.vue'),
+        redirect: 'about',
       },
       {
         path: 'about',
