@@ -12,7 +12,16 @@
               </div>
             </template>
           </v-img>
-          <h2 class="font-weight-bold image-text">Luis Rogelio</h2>
+          <div class="image-text ">
+            <h1 class="font-weight-bold " style="text-align: end;">Luis Rogelio </h1>
+            <p style="text-align: end;">
+              Ingeniero en computacion
+              <br>
+              Desarrollador Web y Mobile
+              <br>
+              Actualmente parte de GoldenM
+            </p>
+          </div>
         </div>
       </v-col>
       <v-col cols="12" md="6" class="">
@@ -29,11 +38,6 @@
     </v-row>
   </v-container>
 
-  <!-- <v-container class="pa-0">
-    <v-row no-gutt>
-      <v-col xs="12" sm="6" class=""> Hola </v-col>
-    </v-row>
-  </v-container> -->
 </template>
 
 <script lang="ts" setup>
@@ -50,11 +54,9 @@ import imageUrl from "@/assets/pictures/full_body_compressed.jpg";
 .image-text {
   z-index: 2;
   position: absolute;
-  right: 0;
-  width: 140px;
-  height: 100px;
-  bottom: 0;
-  transform: translate(-50%, -50%);
-  font-size: 3rem;
+  right: 20px;
+  width: 45%;
+  // height: 100px;
+  bottom: 20px;
 }
 </style>
