@@ -11,27 +11,6 @@
         {{ item.title }}
       </v-btn>
     </template>
-
-    <!-- <v-btn
-      class="mx-2"
-      variant="text"
-      rounded="pill"
-      to="/"
-      :active="useRoute().name === 'Home'"
-    >
-      Me
-    </v-btn>
-
-    <v-btn
-      class="mx-2"
-      rounded="pill"
-      variant="text"
-      to="/About"
-      :active="useRoute().name === 'About'"
-
-    >
-      About
-    </v-btn> -->
   </v-app-bar>
 </template>
 
