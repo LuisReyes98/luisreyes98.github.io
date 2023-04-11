@@ -8,7 +8,10 @@ export const useAppStore = defineStore('app', {
       {
         title: 'About',
         to: '/about',
-        icon: 'mdi-account'
+      },
+      {
+        title: 'Work',
+        to: '/work',
       },
     ],
   }),

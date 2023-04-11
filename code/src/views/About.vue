@@ -38,7 +38,17 @@
         </p>
 
       </v-col>
+      <v-col v-for="knowledge in languagesKnowledge" :key="knowledge.name" cols="2">
+        <knowledge-card :knowledge="knowledge" />
+      </v-col>
     </v-row>
+    <!-- <v-row>
+      <v-col v-for="knowledge in languagesKnowledge" :key="knowledge.name" cols="2">
+        <knowledge-card :knowledge="knowledge" />
+      </v-col>
+    </v-row> -->
+  </v-container>
+  <v-container>
     <v-row>
       <v-col v-for="knowledge in languagesKnowledge" :key="knowledge.name" cols="2">
         <knowledge-card :knowledge="knowledge" />
