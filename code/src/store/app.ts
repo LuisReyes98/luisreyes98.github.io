@@ -1,8 +1,13 @@
 // Utilities
 import { defineStore } from 'pinia'
 
+interface MyAppStore {
+  routes: { title: string; to: string }[]
+  appBarColorByRoute: { [key: string]: string }
+}
+
 export const useAppStore = defineStore('app', {
-  state: () => ({
+  state: (): MyAppStore => ({
     //
     routes: [
       {
@@ -17,6 +22,6 @@ export const useAppStore = defineStore('app', {
     appBarColorByRoute: {
       'Work': '#404360',
       'About': 'white',
-    }
+    },
   }),
 })
