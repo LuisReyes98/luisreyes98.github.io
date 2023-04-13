@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar flat>
+  <v-app-bar flat class="main-top_bar" :color="appStore.appBarColorByRoute[useRoute().name]">
     <v-btn v-if="smAndDown" icon @click="$emit('toggle-drawer')">
       <v-icon>mdi-menu</v-icon>
     </v-btn>
@@ -24,3 +24,10 @@ const { smAndDown } = useDisplay()
 const appStore = useAppStore()
 
 </script>
+
+<style lang="scss" scoped>
+.main-top_bar {
+  transition: background-color 0.2s ease-in-out;
+
+}
+</style>

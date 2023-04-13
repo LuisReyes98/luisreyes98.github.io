@@ -1,5 +1,5 @@
 <template>
-  <v-app dark>
+  <v-app>
     <default-drawer v-if="smAndDown" v-model="drawer" />
     <default-bar @toggle-drawer="drawer = !drawer" />
     <default-view />

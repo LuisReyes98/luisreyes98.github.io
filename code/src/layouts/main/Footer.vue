@@ -1,5 +1,8 @@
 <template>
-  <v-footer border>2023 - Luis Rogelio Reyes Hernandez</v-footer>
+  <v-footer border>©{{ currentYear }} - Luis Rogelio Reyes Hernandez</v-footer>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+
+const currentYear = new Date().getFullYear()
+</script>

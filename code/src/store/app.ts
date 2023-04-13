@@ -6,13 +6,17 @@ export const useAppStore = defineStore('app', {
     //
     routes: [
       {
-        title: 'About',
-        to: '/about',
-      },
-      {
         title: 'Work',
         to: '/work',
       },
+      {
+        title: 'About',
+        to: '/about',
+      },
     ],
+    appBarColorByRoute: {
+      'Work': '#404360',
+      'About': 'white',
+    }
   }),
 })
