@@ -1,7 +1,5 @@
 <template>
-  <v-card>
-    <div>HOLa</div>
-  </v-card>
+  <div></div>
 </template>
 
 <script lang="ts" setup>

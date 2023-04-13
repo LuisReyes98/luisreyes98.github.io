@@ -21,27 +21,62 @@
               <br>
               Actualmente parte de GoldenM
             </p>
+            <div class="d-flex justify-end ma-2">
+              <v-btn size="x-large" color="red">
+                Hire Me!
+              </v-btn>
+            </div>
           </div>
         </div>
       </v-col>
       <v-col cols="12" md="6" class="">
-        <p>
+        <p class="pa-2">
           Eiusmod magna aliquip deserunt do ea in dolore labore quis incididunt enim ad. Occaecat enim consequat officia
           commodo velit est quis cillum quis excepteur dolor. Velit nostrud minim do reprehenderit anim magna enim esse
           laborum est mollit. Consectetur dolor non quis consectetur reprehenderit ex exercitation commodo. Magna ipsum do
           proident laborum. Tempor proident ut sunt reprehenderit in.
         </p>
-        <v-btn size="x-large" color="red">
-          Hire Me!
-        </v-btn>
+
+      </v-col>
+      <v-col v-for="knowledge in languagesKnowledge" :key="knowledge.name" cols="2">
+        <knowledge-card :knowledge="knowledge" />
+      </v-col>
+    </v-row>
+    <!-- <v-row>
+      <v-col v-for="knowledge in languagesKnowledge" :key="knowledge.name" cols="2">
+        <knowledge-card :knowledge="knowledge" />
+      </v-col>
+    </v-row> -->
+  </v-container>
+  <v-container>
+    <v-row>
+      <v-col v-for="knowledge in languagesKnowledge" :key="knowledge.name" cols="2">
+        <knowledge-card :knowledge="knowledge" />
       </v-col>
     </v-row>
   </v-container>
-
 </template>
 
 <script lang="ts" setup>
 import imageUrl from "@/assets/pictures/full_body_compressed.jpg";
+
+import jsLogo from "@/assets/logos/javascript.svg";
+import flutterLogo from "@/assets/logos/flutter.svg";
+
+import KnowledgeCard from "@/components/KnowledgeCard.vue";
+
+const languagesKnowledge = [
+  {
+    'name': 'Javascript',
+    'logo': jsLogo,
+    'description': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.',
+  },
+  {
+    'name': 'Flutter',
+    'logo': flutterLogo,
+    'description': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.',
+  }
+]
 </script>
 
 <style lang="scss" scoped>

@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar flat>
+  <v-app-bar flat class="main-top_bar" :color="appBarColor">
     <v-btn v-if="smAndDown" icon @click="$emit('toggle-drawer')">
       <v-icon>mdi-menu</v-icon>
     </v-btn>
@@ -11,27 +11,6 @@
         {{ item.title }}
       </v-btn>
     </template>
-
-    <!-- <v-btn
-      class="mx-2"
-      variant="text"
-      rounded="pill"
-      to="/"
-      :active="useRoute().name === 'Home'"
-    >
-      Me
-    </v-btn>
-
-    <v-btn
-      class="mx-2"
-      rounded="pill"
-      variant="text"
-      to="/About"
-      :active="useRoute().name === 'About'"
-
-    >
-      About
-    </v-btn> -->
   </v-app-bar>
 </template>
 
@@ -39,9 +18,25 @@
 import { useDisplay } from 'vuetify'
 import { useRoute } from "vue-router";
 import { useAppStore } from '@/store/app'
+import { computed } from "vue"
+
 
 const { smAndDown } = useDisplay()
 
 const appStore = useAppStore()
 
+
+// computed
+const appBarColor = computed(() => {
+  // index
+  var index = useRoute().name?.toString() || '';
+  return appStore.appBarColorByRoute[index];
+})
 </script>
+
+<style lang="scss" scoped>
+.main-top_bar {
+  transition: background-color 0.2s ease-in-out;
+
+}
+</style>
