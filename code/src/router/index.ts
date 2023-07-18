@@ -9,7 +9,7 @@ const routes = [
       // redirect from empty path to /work
       {
         path: '',
-        redirect: 'work',
+        redirect: 'projects',
       },
       {
         path: 'about',
@@ -17,8 +17,8 @@ const routes = [
         component: () => import(/* webpackChunkName: "about" */ '@/views/About.vue'),
       },
       {
-        path: 'work',
-        name: 'Work',
+        path: 'projects',
+        name: 'Projects',
         component: () => import(/* webpackChunkName: "work" */ '@/views/Work.vue'),
       }
     ],
