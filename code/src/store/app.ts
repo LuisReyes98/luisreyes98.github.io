@@ -11,17 +11,17 @@ export const useAppStore = defineStore('app', {
     //
     routes: [
       {
-        title: 'Work',
-        to: '/work',
+        title: 'My Projects',
+        to: '/projects',
       },
       {
-        title: 'About',
+        title: 'About Me',
         to: '/about',
       },
     ],
     appBarColorByRoute: {
-      'Work': '#404360',
-      'About': 'white',
+      'Projects': '#404360',
+      'About': '#FFFFFF',
     },
   }),
 })
