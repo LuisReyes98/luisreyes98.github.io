@@ -9,7 +9,7 @@ const routes = [
       // redirect from empty path to /work
       {
         path: '',
-        redirect: 'projects',
+        redirect: 'about',
       },
       {
         path: 'about',
