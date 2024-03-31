@@ -10,7 +10,9 @@ const currentYear = new Date().getFullYear()
 </script>
 
 <style lang="scss" scoped>
+@import '../../styles/settings.scss';
+
 .page_footer {
-  background: rgb(202, 208, 247);
+  background: $fotter-color;
 }
 </style>

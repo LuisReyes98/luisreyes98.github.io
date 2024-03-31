@@ -35,7 +35,9 @@ const routeName = computed(() => {
 
 
 <style scoped lang="scss">
+@import '../../styles/settings.scss';
+
 .gradient_background {
-  background: linear-gradient(rgb(255, 255, 255) 0%, rgb(202, 208, 247) 90%);
+  background: linear-gradient(rgb(255, 255, 255) 0%, $fotter-color 80%);
 }
 </style>
