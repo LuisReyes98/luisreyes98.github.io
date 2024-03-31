@@ -1,6 +1,7 @@
 <template>
-  <!-- <HelloWorld /> -->
-  <v-container class="ma-0 pa-0">
+
+
+  <v-container class="ma-0 pa-0 ">
     <v-row no-gutters>
       <v-col cols="12" md="4">
         <div style="position: relative">
@@ -12,48 +13,44 @@
               </div>
             </template>
           </v-img>
-          
+
         </div>
       </v-col>
-      
+
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
-        <p class="pa-2" style="font-size: 1.25rem; max-width: 700px; line-height: 2;" >
+        <p class="pa-2" style="font-size: 1.25rem; max-width: 700px; line-height: 2;">
           I am a Lead UX Engineer, Flutter Developer for Mobile and Web at GoldenM INC.
           <br>
-            <br>
+          <br>
           I am a computer engineer graduated from the University Jose Antonio Páez.
           I am studying to learn AI to be a machine learning engineer.
           <br>
-            <br>
-          My dream Job is to Use Machine Learning and AI to build systems that help shape the future of the world and help deal with global warming.
+          <br>
+          My dream Job is to Use Machine Learning and AI to build systems that help shape the future of the world and
+          help
+          deal with global warming.
         </p>
       </v-col>
       <v-col cols="12" md="2" style="position: relative; ">
         <div style="height: 220px;"></div>
-          <div style="position: absolute; bottom: 0; right: 0; left: 0; " class="pa-1">
-            <h1 class="font-weight-bold " style="text-align: end;">Luis Rogelio </h1>
-            <p style="text-align: end;">
-              Ingeniero en computacion
-              <br>
-              Desarrollador Web y Mobile
-              <br>
-              Actualmente parte de GoldenM
-            </p>
-            <div class="d-flex justify-end mt-4">
-              <v-btn
-                size="x-large"
-                style="width: 100%;"
-                color="red"
-                href="https://www.linkedin.com/in/luis-rogelio-reyes-hern%C3%A1ndez-3a1028114/"
-                target="_blank"
-                prepend-icon="mdi-linkedin"
-
-              >
-                Hire Me!
-              </v-btn>
-            </div>
+        <div style="position: absolute; bottom: 0; right: 0; left: 0; " class="pa-1">
+          <h1 class="font-weight-bold " style="text-align: end;">Luis Rogelio </h1>
+          <p style="text-align: end;">
+            Ingeniero en computacion
+            <br>
+            Desarrollador Web y Mobile
+            <br>
+            Actualmente parte de GoldenM
+          </p>
+          <div class="d-flex justify-end mt-4">
+            <v-btn size="x-large" style="width: 100%;" color="red"
+              href="https://www.linkedin.com/in/luis-rogelio-reyes-hern%C3%A1ndez-3a1028114/" target="_blank"
+              prepend-icon="mdi-linkedin">
+              Hire Me!
+            </v-btn>
           </div>
-        </v-col>
+        </div>
+      </v-col>
     </v-row>
   </v-container>
   <!-- <v-container>
