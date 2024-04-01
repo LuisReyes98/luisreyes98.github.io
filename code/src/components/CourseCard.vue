@@ -14,28 +14,15 @@
 
 </template>
 
-<script>
-export default {
-  name: 'CourseCard',
-  props: {
-    logoImage: {
-      type: String,
-      required: true
-    },
-    courseLogo: {
-      type: String,
-      required: true
-    },
-    link: {
-      type: String,
-      required: true
-    },
-    title: {
-      type: String,
-      required: true
-    },
-  }
-}
+<script lang="ts" setup>
+import { defineProps } from 'vue';
+
+defineProps<{
+  logoImage: string,
+  courseLogo: string,
+  link: string,
+  title: string,
+}>()
 </script>
 
 <style scoped lang="scss">
