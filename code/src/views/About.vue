@@ -36,11 +36,11 @@
         <div style="position: absolute; bottom: 0; right: 0; left: 0; " class="pa-1">
           <h1 class="font-weight-bold " style="text-align: end;">Luis Rogelio </h1>
           <p style="text-align: end;">
-            Ingeniero en computacion
+            Computer Engineer
             <br>
-            Desarrollador Web y Mobile
+            Web & Mobile Development
             <br>
-            Actualmente parte de GoldenM
+            Currently working at <a href="https://www.linkedin.com/company/golden-m-inc/" target="_blank">GoldenM</a>
           </p>
           <div class="d-flex justify-end mt-4">
             <v-btn size="x-large" style="width: 100%;" color="red"
@@ -53,35 +53,33 @@
       </v-col>
     </v-row>
   </v-container>
-  <!-- <v-container>
-    <v-row>
-      <v-col v-for="knowledge in languagesKnowledge" :key="knowledge.name" cols="2">
-        <knowledge-card :knowledge="knowledge" />
+  <v-container>
+    <v-row no-gutters class="mb-12">
+      <h1>Courses and personal projects</h1>
+    </v-row>
+    <v-row no-gutters>
+      <v-col v-for="course in coursesAndProjects" :key="course.name" cols="12" xs="12" sm="6" md="4" lg="4">
+        <course-card :logo-image="course.platformLogo" :course-logo="course.courseLogo" :link="course.link"
+          :title="course.name" />
       </v-col>
     </v-row>
-  </v-container> -->
+  </v-container>
 </template>
 
 <script lang="ts" setup>
 import imageUrl from "@/assets/pictures/full_body_compressed.jpg";
 
-import jsLogo from "@/assets/logos/javascript.svg";
-import flutterLogo from "@/assets/logos/flutter.svg";
 
-import KnowledgeCard from "@/components/KnowledgeCard.vue";
+import CourseCard from "@/components/CourseCard.vue";
+import { computed } from "vue"
 
-const languagesKnowledge = [
-  {
-    'name': 'Javascript',
-    'logo': jsLogo,
-    'description': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.',
-  },
-  {
-    'name': 'Flutter',
-    'logo': flutterLogo,
-    'description': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.',
-  }
-]
+import { useAppStore } from '@/store/app'
+const appStore = useAppStore()
+
+const coursesAndProjects = computed(() => {
+  return appStore.coursesAndProjects
+})
+
 </script>
 
 <style lang="scss" scoped>

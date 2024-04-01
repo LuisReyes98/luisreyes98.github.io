@@ -1,14 +1,17 @@
 <template>
-  <div class="course-card">
-    <img :src="logoImage" alt="Course Logo" class="logo-image" />
-    <div class="course-details">
-      <h2 class="title">{{ title }}</h2>
-      <h3 class="subtitle">{{ subtitle }}</h3>
-      <a :href="certificateLink" class="certificate-link">
-        <img :src="certificateImage" alt="Certificate" class="certificate-image" />
-      </a>
-    </div>
-  </div>
+
+  <v-card class="course-card pa-2 ma-2">
+    <a :href="link" target="_blank" class="certificate-link">
+      <div class="d-flex justify-space-between ">
+        <img :src="logoImage" class="logo-image" />
+        <div class="d-flex align-center">
+          <h3 class="title">{{ title }}</h3>
+        </div>
+        <img :src="courseLogo" class="course-logo" />
+      </div>
+    </a>
+  </v-card>
+
 </template>
 
 <script>
@@ -19,11 +22,11 @@ export default {
       type: String,
       required: true
     },
-    certificateImage: {
+    courseLogo: {
       type: String,
       required: true
     },
-    certificateLink: {
+    link: {
       type: String,
       required: true
     },
@@ -31,50 +34,44 @@ export default {
       type: String,
       required: true
     },
-    subtitle: {
-      type: String,
-      required: true
-    }
   }
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .course-card {
-  display: flex;
-  align-items: center;
-  padding: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: 4px;
+  border-radius: 25px;
+  transition: all 0.3s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
 .logo-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+
+.course-logo {
   width: 80px;
   height: 80px;
-  margin-right: 16px;
-}
-
-.course-details {
-  flex: 1;
-}
-
-.title {
-  font-size: 18px;
-  margin-bottom: 8px;
-}
-
-.subtitle {
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 8px;
-}
-
-.certificate-link {
-  display: inline-block;
-}
-
-.certificate-image {
-  width: 120px;
-  height: 90px;
+  margin-left: 5px;
 }
 </style>
