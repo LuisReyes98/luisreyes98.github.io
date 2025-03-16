@@ -44,7 +44,7 @@
           </p>
           <div class="d-flex justify-end mt-4">
             <v-btn size="x-large" style="width: 100%;" color="red"
-              href="https://www.linkedin.com/in/luis-rogelio-reyes-hern%C3%A1ndez-3a1028114/" target="_blank"
+              href="https://www.linkedin.com/in/luis-rogelio-reyes/" target="_blank"
               prepend-icon="mdi-linkedin">
               Hire Me!
             </v-btn>
@@ -71,9 +71,9 @@ import imageUrl from "@/assets/pictures/full_body_compressed.jpg";
 
 
 import CourseCard from "@/components/CourseCard.vue";
-import { computed } from "vue"
+import { computed } from "vue";
 
-import { useAppStore } from '@/store/app'
+import { useAppStore } from '@/store/app';
 const appStore = useAppStore()
 
 const coursesAndProjects = computed(() => {
