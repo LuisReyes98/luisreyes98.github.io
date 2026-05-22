@@ -2,7 +2,7 @@
 
 
   <v-container class="ma-0 pa-0 ">
-    <v-row no-gutters>
+    <v-row style="min-width: 95vw; ">
       <v-col cols="12" md="4">
         <div style="position: relative">
           <v-img cover aspect-ratio="9/16" height="70vh" width="100%" max-width="550px" class="image_cropped"
@@ -17,7 +17,7 @@
         </div>
       </v-col>
 
-      <v-col cols="12" md="6" class="d-flex align-center justify-center">
+      <v-col cols="12" md="5" class="d-flex align-center justify-center">
         <p class="pa-2" style="font-size: 1.25rem; max-width: 700px; line-height: 2;">
           I am a Lead UX Engineer, Flutter Developer for Mobile and Web at GoldenM INC.
           <br>
@@ -31,7 +31,7 @@
           deal with global warming.
         </p>
       </v-col>
-      <v-col cols="12" md="2" style="position: relative; ">
+      <v-col cols="12" md="3" style="position: relative; ">
         <div style="height: 220px;"></div>
         <div style="position: absolute; bottom: 0; right: 0; left: 0; " class="pa-1">
           <h1 class="font-weight-bold " style="text-align: end;">Luis Rogelio </h1>
