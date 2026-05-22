@@ -1,6 +1,13 @@
 <template>
   <!-- <div style="background-color: #404360;">Work</div> -->
-  <!-- <div style="height: 200px;"></div> -->
+  <project
+    :title="openSourceWidgetMarkerProject.title"
+    :description="openSourceWidgetMarkerProject.description"
+    :color="openSourceWidgetMarkerProject.color"
+    :image-url="openSourceWidgetMarkerProject.imageUrl"
+    :links="openSourceWidgetMarkerProject.links"
+    :technologies="openSourceWidgetMarkerProject.technologies"/>
+  <div style="height: 200px;"></div>
   <project
     :title="mainProject.title"
     :description="mainProject.description"
@@ -15,6 +22,7 @@
 <script lang="ts" setup>
 import Project from '@/components/Project.vue';
 import InTimeSVG from '@/assets/project_logos/intime_logo.svg';
+import FlutterSVGLogo from '@/assets/project_logos/flutter_transparent.svg';
 import GooglePlayLogo from '@/assets/logos/google_play-icon.svg';
 
 const mainProject = {
@@ -24,7 +32,7 @@ const mainProject = {
   imageUrl: InTimeSVG,
   links: [
     {
-      title: 'Download Now',
+      title: 'Currently Unavailable',
       url: 'https://play.google.com/store/apps/details?id=com.lrrh.intime',
       logo: GooglePlayLogo,
       icon: 'mdi-android'
@@ -42,7 +50,27 @@ const mainProject = {
       description: ''
     }
   ]
+}
 
-
+const openSourceWidgetMarkerProject = {
+  title: 'widget_marker_google_maps_flutter',
+  description: 'Open source contribution and maintenance of the package widget_marker_google_maps_flutter , creates as a fork of the package widget_marker_google_maps, that was no longer maintained by the original author.',
+  color: '#042B59',
+  imageUrl: FlutterSVGLogo,
+  links: [
+    {
+      title: 'Pub.dev',
+      url: 'https://pub.dev/packages/widget_marker_google_maps_flutter',
+      logo: '',
+      icon: ''
+    }
+  ],
+  technologies: [
+    {
+      name: 'Flutter',
+      logo: '',
+      description: ''
+    },
+  ]
 }
 </script>

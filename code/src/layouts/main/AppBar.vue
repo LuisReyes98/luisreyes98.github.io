@@ -30,14 +30,13 @@
 
 <script lang="ts" setup>
 import { useDisplay } from 'vuetify'
-import { useRoute, useRouter } from "vue-router";
+import { useRoute, } from "vue-router";
 import { useAppStore } from '@/store/app'
 import { computed } from "vue"
 import { calculateTextColor } from '@/utils/colors'
 
 const { smAndDown } = useDisplay()
 const route = useRoute()
-const router = useRouter()
 const appStore = useAppStore()
 
 
@@ -47,12 +46,6 @@ const appBarColor = computed(() => {
   var index = route.name?.toString() || '';
   return appStore.appBarColorByRoute[index];
 })
-
-// method to travel to a different route
-function navigateTo(route: string) {
-  // navigate to route
-  router.push(route)
-}
 
 </script>
 
