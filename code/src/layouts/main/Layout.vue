@@ -11,8 +11,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 import { useDisplay } from 'vuetify'
-import { useRoute } from "vue-router";
-import { computed } from "vue"
 
 import DefaultBar from './AppBar.vue'
 import DefaultView from './View.vue'
@@ -27,15 +25,12 @@ let drawer = ref(false)
 
 const { smAndDown } = useDisplay()
 
-// computed route name
-const routeName = computed(() => {
-  return useRoute().name?.toString() || '';
-})
 </script>
 
 
 <style scoped lang="scss">
-@import '../../styles/settings.scss';
+$fotter-color: rgb(180, 195, 245);
+
 
 .gradient_background {
   background: linear-gradient(rgb(255, 255, 255) 0%, $fotter-color 80%);
