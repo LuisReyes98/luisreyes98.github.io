@@ -22,6 +22,7 @@ const routes = [
         component: () => import(/* webpackChunkName: "work" */ '@/views/Work.vue'),
       }
     ],
+    redirect: '/about'
   },
 ]
 

@@ -12,7 +12,7 @@
       <v-col
         cols="12"
         md="3"
-        class="d-flex justify-center"
+        class="d-flex justify-center pa-2"
       >
         <v-img
           :src="imageUrl"
@@ -22,7 +22,8 @@
       </v-col>
       <v-col
         cols="12"
-          md="6"
+        md="6"
+        class="d-flex justify-center pa-2"
       >
         <p
           :style="textStyle()"
@@ -63,8 +64,23 @@
         </div>
       </v-col>
       <v-col
+        v-if="technologies.length > 0"
         cols="9"
       >
+        <h2
+          class="ma-0 pa-0"
+          :style="`color: ${calculateTextColor(color)}`"
+        >Technologies Used</h2>
+        <v-chip
+          v-for="technology in technologies"
+          :key="technology.name"
+          class="ma-2"
+          size="large"
+          variant="tonal"
+          :style="`color: ${calculateTextColor(color)}`"
+        >
+          {{ technology.name }}
+        </v-chip>
 
       </v-col>
     </v-row>

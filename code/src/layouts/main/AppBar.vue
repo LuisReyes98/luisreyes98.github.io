@@ -19,7 +19,7 @@
         rounded="pill"
         variant="tonal"
         :to="item.to"
-        :active="useRoute().name === item.title"
+        :active="route.name === item.title"
         :style="`color: ${calculateTextColor(appBarColor)}`"
       >
         {{ item.title }}
@@ -30,20 +30,20 @@
 
 <script lang="ts" setup>
 import { useDisplay } from 'vuetify'
-import { useRoute } from "vue-router";
+import { useRoute, } from "vue-router";
 import { useAppStore } from '@/store/app'
 import { computed } from "vue"
 import { calculateTextColor } from '@/utils/colors'
 
 const { smAndDown } = useDisplay()
-
+const route = useRoute()
 const appStore = useAppStore()
 
 
 // computed
 const appBarColor = computed(() => {
   // index
-  var index = useRoute().name?.toString() || '';
+  var index = route.name?.toString() || '';
   return appStore.appBarColorByRoute[index];
 })
 

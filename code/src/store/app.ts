@@ -23,7 +23,7 @@ export const useAppStore = defineStore('app', {
       },
     ],
     appBarColorByRoute: {
-      'Projects': '#404360',
+      'Projects': '#042B59',
       'About': '#FFFFFF',
     },
     coursesAndProjects: coursesList(),
